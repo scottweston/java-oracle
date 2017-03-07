@@ -13,7 +13,7 @@ RUN set -x \
   && apt-get install -y --allow-downgrades --allow-remove-essential --allow-change-held-packages oracle-java8-installer \
   && apt-get install oracle-java8-set-default \
   && apt-get clean \
-  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/cache/oracle*
 
 ENTRYPOINT ["/usr/bin/java"]
 CMD ["-version"]
